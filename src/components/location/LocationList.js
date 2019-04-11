@@ -3,18 +3,19 @@ import React, { Component } from 'react'
 export default class LocationList extends Component {
     render() {
         return(
-            <article>
-            <section>
-            <h3>Student Kennels</h3>
-                <h4>Nashville North Location</h4>
-                <h5>500 Puppy Way</h5>
-            </section>
-            <section>
-            <h3>Instructor Kennels</h3>
-                <h4>Nashville South Location</h4>
-                <h5>600 Mutt Lane</h5>
-            </section>
-            </article>
+            <section className="locations">
+            <h3>Our Locations</h3>
+                    {
+                        this.props.locations.map(location =>
+                            <div key={location.id}>
+                                {location.name}
+                                <br></br>
+                                {location.address}
+                                <hr></hr>
+                            </div>
+                        )
+                    }
+                    </section>
         )
     }
 }
