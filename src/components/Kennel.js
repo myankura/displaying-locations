@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import EmployeeList from "./employee/EmployeeList"
 import LocationList from "./location/LocationList"
 import "./kennel.css"
+import AnimalList from "./animal/AnimalList";
 
 
 class Kennel extends Component {
@@ -12,6 +13,13 @@ class Kennel extends Component {
         faking it and just creating those arrays in the component
         itself
     */
+    animalsFromAPI = [
+        { id: 1, name: "Bear" },
+        { id: 2, name: "Spaz" },
+        { id: 3, name: "Scraggles" },
+        { id: 4, name: "Bella" },
+        { id: 5, name: "Mischief" }
+    ]
     employeesFromAPI = [
         { id: 1, name: "Jessica Younker" },
         { id: 2, name: "Jordan Nelson" },
@@ -25,7 +33,9 @@ class Kennel extends Component {
         { id: 2, name: "Nashville South", address: "10101 Binary Court" }
     ]
 
+
     state = {
+        animals: this.animalsFromAPI,
         employees: this.employeesFromAPI,
         locations: this.locationsFromAPI
     }
@@ -35,6 +45,7 @@ class Kennel extends Component {
             <article className="kennel">
                 <LocationList locations={this.state.locations} />
                 <EmployeeList employees={this.state.employees} />
+                <AnimalList animals={this.state.animals} />
             </article>
         )
     }
