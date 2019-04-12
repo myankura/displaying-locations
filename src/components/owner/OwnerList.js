@@ -24,13 +24,13 @@ export default class OwnerList extends Component {
     render() {
         return(
             <section className="content">
-                        <h3>Owners</h3>
+                        <h2>Owners</h2>
+                        <br></br>
                     {
                         this.props.owners.map(owner =>
                             <div key={owner.id}>
-                                <h4>{owner.name}</h4>
-                                <br></br>
-                                {owner.phone}
+                                <h5>{owner.name}</h5>
+                                {owner.phoneNumber}
                                 <hr></hr>
                             </div>)
                     }

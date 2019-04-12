@@ -28,8 +28,10 @@ export default class ApplicationViews extends Component {
         { id: 6, name: "Checkers" }
     ]
     ownersFromAPI = [
-        { id: 1, name: "Michael Yankura", phone:"615-294-3167" },
-        { id: 2, name: "Sam Johnson", phone: "555-123-4567"}
+        { id: 1, name: "Michael Yankura", phoneNumber:"615-294-3167" },
+        { id: 2, name: "Sam Johnson", phoneNumber: "555-123-4567"},
+        { id: 2, name: "Sue Thompson", phoneNumber: "555-321-4854"},
+        { id: 2, name: "Jill Lamar", phoneNumber: "555-635-9857"}
     ]
 
     state = {
