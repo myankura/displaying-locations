@@ -5,7 +5,7 @@ import "./employee.css"
 export default class EmployeeList extends Component {
     render () {
         return (
-            <section className="content employee">
+            <section className="content employees">
             {
                 this.props.employees.map(employee =>
                     <div key={employee.id} className="card">
