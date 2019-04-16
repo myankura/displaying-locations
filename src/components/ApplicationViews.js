@@ -4,10 +4,10 @@ import AnimalList from './animal/AnimalList'
 import LocationList from './location/LocationList'
 import EmployeeList from './employee/EmployeeList'
 import OwnerList from './owner/OwnerList'
-import AnimalManager from './modules/AnimalManager'
-import EmployeeManager from './modules/EmployeeManager'
-import LocationManager from './modules/LocationManager'
-import OwnerManager from './modules/OwnerManager'
+import AnimalManager from '../modules/AnimalManager'
+import EmployeeManager from '../modules/EmployeeManager'
+import LocationManager from '../modules/LocationManager'
+import OwnerManager from '../modules/OwnerManager'
 
 export default class ApplicationViews extends Component{
     state = {
@@ -20,12 +20,17 @@ export default class ApplicationViews extends Component{
     componentDidMount() {
         const newState = {}
 
-        AnimalManager.getAll().then(animals => newState.animals = animals)
-        EmployeeManager.getAll().then(employees => newState.employees = employees)
-        LocationManager.getAll().then(locations => newState.locations = locations)
-        OwnerManager.getAll().then(owners => {
+        AnimalManager.getAll()
+        .then( animals => newState.animals = animals)
+        .then(() => EmployeeManager.getAll())
+        .then(employees => newState.employees = employees)
+        .then(() => LocationManager.getAll())
+        .then(locations => newState.locations = locations)
+        .then(() => OwnerManager.getAll())
+        .then(owners => {
             newState.owners = owners
-            this.setState(newState)})
+            this.setState(newState)
+        })
 
 
     }
