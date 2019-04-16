@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import employee from "./employee.jpg"
 import "./employee.css"
 
 export default class EmployeeList extends Component {
