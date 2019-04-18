@@ -2,15 +2,33 @@
   "employees": [
     {
       "id": 1,
-      "name": "Jessica Younker"
+      "name": "Jessica Younker",
+      "phoneNumber": "555-321-9876"
     },
     {
       "id": 2,
-      "name": "Jordan Nelson"
+      "name": "Nelson Michaels",
+      "phoneNumber": "555-222-5431"
     },
     {
       "id": 3,
-      "name": "Zoe LeBlanc"
+      "name": "Michael Clinton",
+      "phoneNumber": "555-333-5431"
+    },
+    {
+      "id": 4,
+      "name": "Clinton Thomas",
+      "phoneNumber": "555-222-5467"
+    },
+    {
+      "id": 5,
+      "name": "Thomas  Jackson",
+      "phoneNumber": "555-222-2396"
+    },
+    {
+      "id": 6,
+      "name": "Jackson Andrews",
+      "phoneNumber": "555-444-7762"
     }
   ],
   "locations": [
@@ -28,23 +46,23 @@
   "animals": [
     {
       "id": 1,
-      "name": "Doodles"
+      "name": "Tank",
+      "breed": "Mastiff"
     },
     {
       "id": 2,
-      "name": "Jack"
+      "name": "Jack",
+      "breed": "Jack Russel Terrier"
     },
     {
       "id": 3,
-      "name": "Angus"
+      "name": "Angus",
+      "breed": "Pitbull"
     },
     {
       "id": 4,
-      "name": "Henley"
-    },
-    {
-      "id": 5,
-      "name": "Derkins"
+      "name": "Henley",
+      "breed": "Yorkie"
     }
   ],
   "owners": [
