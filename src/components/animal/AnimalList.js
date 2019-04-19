@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import dog from "./DogIcon.svg"
 import "./animal.css"
 
+//list animals
 export default class AnimalList extends Component {
     render() {
         //create a button for admitting new animals

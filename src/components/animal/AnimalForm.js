@@ -38,7 +38,7 @@ export default class AnimalForm extends Component {
         .then(() => this.props.history.push("/animals"));
     }
   };
-
+  //render animal form when admit animal is clicked.
   render() {
     return (
       <React.Fragment>

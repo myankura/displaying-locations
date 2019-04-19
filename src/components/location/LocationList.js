@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './location.css'
 
+//show locations
 export default class LocationList extends Component {
     render() {
         return (

@@ -14,6 +14,7 @@ import EmployeeDetail from './employee/EmployeeDetail'
 import LocationDetail from './location/LocationDetail'
 import AnimalForm from './animal/AnimalForm'
 
+//List all data on respective pages.
 class ApplicationViews extends Component {
     state = {
         locations: [],
