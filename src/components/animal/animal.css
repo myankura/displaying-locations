@@ -14,6 +14,7 @@
 
 .card {
     width: 10rem;
+    margin-top: 50px;
 }
 
 .card-title {
@@ -26,4 +27,13 @@
 .card-link {
     margin: 12px 0 0 0;
     font-size: 0.7em;
+}
+.animalButton {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 0 10px 0;
+    margin-top: 50px;
+  }
+.animalForm {
+    margin-top: 45px;
 }
