@@ -44,7 +44,7 @@ export default class AnimalForm extends Component {
       <React.Fragment>
         <form className="animalForm">
           <div className="form-group">
-            <label htmlFor="animalName">Animal name</label>
+            <label htmlFor="animalName">Employee name</label>
             <input
               type="text"
               required
@@ -55,7 +55,7 @@ export default class AnimalForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="breed">Breed</label>
+            <label htmlFor="breed">Phone number</label>
             <input
               type="text"
               required
@@ -74,9 +74,9 @@ export default class AnimalForm extends Component {
               onChange={this.handleFieldChange}
             >
               <option value="">Select an employee</option>
-              {this.props.employees.map(e => (
-                <option key={e.id} id={e.id} value={e.id}>
-                  {e.name}
+              {this.props.employees.map(employee => (
+                <option key={employee.id} id={employee.id} value={employee.id}>
+                  {employee.name}
                 </option>
               ))}
             </select>

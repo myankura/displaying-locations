@@ -13,6 +13,7 @@ import AnimalDetail from './animal/AnimalDetail'
 import EmployeeDetail from './employee/EmployeeDetail'
 import LocationDetail from './location/LocationDetail'
 import AnimalForm from './animal/AnimalForm'
+import EmployeeForm from './employee/EmployeeForm'
 
 //List all data on respective pages.
 class ApplicationViews extends Component {
@@ -57,6 +58,8 @@ class ApplicationViews extends Component {
                     animals: animals
                 })
             );
+
+
     //fire employee
     deleteEmployee = id => EmployeeManager.delete(id)
         .then(EmployeeManager.getAll)
@@ -64,6 +67,17 @@ class ApplicationViews extends Component {
             this.props.history.push("/employees")
             this.setState({ employees: employees })
         })
+    //hire employee
+    addEmployee = employee =>
+        EmployeeManager.post(employee)
+            .then(() => EmployeeManager.getAll())
+            .then(employees =>
+                this.setState({
+                    employees: employees
+                })
+            );
+
+
     deleteLocation = id => LocationManager.delete(id)
         .then(LocationManager.getAll)
         .then(locations => {
@@ -86,21 +100,27 @@ class ApplicationViews extends Component {
     render() {
         return (
             <React.Fragment>
-                <Route exact path="/" render={(props) => {
+                <Route exact path="/" render={() => {
+                    //Landing page is set to be locations
                     return <LocationList locations={this.state.locations} />
                 }} />
 
                 <Route exact path="/animals" render={(props) => {
-                    return <AnimalList animals={this.state.animals}
-                        deleteAnimal={this.deleteAnimal} {...props} />
+                    //This displays the animals page
+                    return <AnimalList {...props}
+                        deleteAnimal={this.deleteAnimal}
+                        animals={this.state.animals} />
                 }} />
 
-                <Route exact path="/employees" render={() => {
-                    return <EmployeeList deleteEmployee={this.deleteEmployee}
+                <Route exact path="/employees" render={(props) => {
+                    //This displays the employees page
+                    return <EmployeeList {...props}
+                    deleteEmployee={this.deleteEmployee}
                         employees={this.state.employees} />
                 }} />
 
                 <Route exact path="/owners" render={() => {
+                    //This displays the owners page
                     return <OwnerList deleteOwner={this.deleteOwner}
                         owners={this.state.owners} />
                 }} />
@@ -153,9 +173,16 @@ class ApplicationViews extends Component {
 
                 <Route path="/animals/new" render={(props) => {
                     return <AnimalForm {...props}
+                    //This is what renders the animal form
                         addAnimal={this.addAnimal}
                         employees={this.state.employees} />
                 }} />
+                <Route path="/employees/new" render={(props) => {
+                    return <EmployeeForm {...props}
+                        addEmployee={this.addEmployee}
+                        employees={this.state.employees} />
+                }} />
+
             </React.Fragment>
         )
     }

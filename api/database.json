@@ -91,6 +91,18 @@
       "breed": "Pug",
       "employeeId": 6,
       "id": 8
+    },
+    {
+      "name": "Chad",
+      "breed": "Chow Chow",
+      "employeeId": 4,
+      "id": 9
+    },
+    {
+      "name": "Taco",
+      "breed": "Chihuahua",
+      "employeeId": 5,
+      "id": 10
     }
   ],
   "owners": [
